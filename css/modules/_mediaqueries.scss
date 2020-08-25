@@ -1,0 +1,294 @@
+@media screen and (min-width: 47.9375rem) {
+   header {
+      /* A way to align the menu side by side with logo */
+      .header-block {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .nav-toggle-label {
+         display: none;
+      }
+
+      .logo {
+         display: flex;
+         flex-direction: column;
+         margin: 0;
+         max-width: 100px;
+         width: 100px;
+
+         &-img {
+            width: 100%;
+         }
+      }
+
+      .main-nav {
+         position: relative;
+         display: flex;
+         align-items: flex-start;
+         height: 100%;
+         margin-left: auto;
+         transform: unset;
+         transform-origin: unset;
+         background-color: transparent;
+
+         .nav-list {
+            position: relative;
+            top: unset;
+            left: unset;
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            text-align: left;
+            transform: unset;
+
+            &-item {
+               margin: 0;
+
+               a {
+                  color: $primary-clr;
+                  text-decoration: none;
+                  font-size: 1rem;
+                  padding: 1rem 1.5rem;
+                  opacity: 1;
+                  transition: color 0.2s ease-in-out;
+                  text-transform: uppercase;
+               }
+
+               a:hover {
+                  color: $accent-red-clr;
+               }
+
+               a.current::after {
+                  content: "";
+                  position: absolute;
+                  display: block;
+                  width: 6px;
+                  height: 6px;
+                  left: 50%;
+                  bottom: 0.5rem;
+                  transform: translateY(-50%, unset);
+                  border-radius: 3px;
+                  background-color: $accent-red-clr;
+               }
+            }
+         }
+      }
+
+      .menu-logo {
+         display: none;
+         transform: unset;
+      }
+   }
+
+   .container {
+      max-width: 70%;
+      width: 70%;
+      margin: 0 auto;
+   }
+
+   .top-title {
+      font-size: 2.5rem;
+      line-height: 1.5em;
+      text-align: center;
+      padding-top: 3em;
+   }
+
+   // BODY
+   main {
+      margin: 6rem 0;
+   }
+
+   .line {
+      display: block;
+      position: absolute;
+   }
+   .top-left {
+      display: block;
+      width: 6rem;
+      height: 2px;
+      background-color: $line-clr;
+      top: 0rem;
+      left: -4rem;
+   }
+   .top-left::after {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 2px;
+      top: 2rem;
+      left: -2rem;
+      background-color: $line-clr;
+      transform: rotate(90deg);
+   }
+
+   .top-right {
+      display: block;
+      width: 6rem;
+      height: 2px;
+      background-color: $line-clr;
+      top: 0rem;
+      right: -4rem;
+   }
+   .top-right::after {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 2px;
+      top: 2rem;
+      right: -2rem;
+      background-color: $line-clr;
+      transform: rotate(90deg);
+   }
+
+   .btm-right {
+      display: block;
+      width: 6rem;
+      height: 2px;
+      background-color: $line-clr;
+      bottom: -3rem;
+      right: -4rem;
+   }
+   .btm-right::after {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 2px;
+      bottom: 2rem;
+      right: -2rem;
+      background-color: $line-clr;
+      transform: rotate(90deg);
+   }
+
+   .btm-left {
+      display: block;
+      width: 6rem;
+      height: 2px;
+      background-color: $line-clr;
+      bottom: -3rem;
+      left: -4rem;
+   }
+   .btm-left::after {
+      content: "";
+      position: absolute;
+      width: 6rem;
+      height: 2px;
+      bottom: 2rem;
+      left: -2rem;
+      background-color: $line-clr;
+      transform: rotate(90deg);
+   }
+
+   .image-frame {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -4rem;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: $accent-green-clr;
+      box-shadow: 0 0 14px 10px rgba(0, 0, 0, 0.2);
+
+      & img {
+         display: inline-block;
+      }
+   }
+
+   article {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 3rem 1.5rem;
+      box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 0;
+   }
+
+   // PROJECTS STYLES
+   .project-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      place-items: center;
+   }
+   .project-frame {
+      max-width: 60vw;
+      max-height: 60vw;
+   }
+
+   // FOOTER
+   footer {
+      margin-top: 6rem;
+   }
+   .inner-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      padding: 0 2rem;
+   }
+
+   .footer-block {
+      display: flex;
+      margin-bottom: 2rem;
+   }
+   .footer-block + .footer-block {
+      margin: 0;
+   }
+
+   // MISCELLANEOUS
+   .btn-wrapper {
+      display: flex;
+      justify-content: center;
+   }
+   .btn {
+      display: flex;
+      min-width: 0;
+      padding: 1rem 2rem;
+      align-items: center;
+   }
+   .btn + .btn {
+      margin-top: 0;
+      margin-left: 1rem;
+   }
+}
+
+@media screen and (min-width: 1023px) {
+   main {
+      margin-top: 3rem;
+   }
+
+   .content-copy {
+      display: block;
+      max-width: 55ch;
+      margin: 0 auto 1.5em auto;
+   }
+
+   .project-wrapper {
+      grid-template-columns: minmax(200px, 45%) minmax(200px, 45%);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      grid-gap: 1.5rem;
+   }
+   .project-frame {
+      max-width: 100%;
+      max-height: 30vw;
+   }
+}
+
+@media screen and (min-width: 1360px) {
+   .top-title {
+      font-size: 3rem;
+   }
+   .content-copy {
+      max-width: 60ch;
+      font-size: 1.8rem;
+   }
+}
+
+// @media screen and (min-width: 1920px) {
+
+// }
