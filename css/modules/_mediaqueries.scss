@@ -99,7 +99,7 @@
 
    // BODY
    main {
-      margin: 6rem 0;
+      margin: 3rem 0;
    }
 
    .line {
@@ -219,6 +219,15 @@
       max-height: 60vw;
    }
 
+   .article-info {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   .article-info_text + .article-info_text {
+      margin-left: 1rem;
+   }
+
    // FOOTER
    footer {
       margin-top: 6rem;
@@ -261,7 +270,11 @@
       margin-top: 3rem;
    }
 
-   .content-copy {
+   article {
+      text-align: left;
+   }
+
+   .content_copytext {
       display: block;
       max-width: 55ch;
       margin: 0 auto 1.5em auto;
@@ -277,15 +290,32 @@
       max-width: 100%;
       max-height: 30vw;
    }
+
+   .project_overview_grid_right {
+      padding: 2rem;
+   }
+
+   .copytext_title,
+   .copytext_heading,
+   .copytext_text {
+      text-align: left;
+   }
 }
 
 @media screen and (min-width: 1360px) {
    .top-title {
-      font-size: 3rem;
+      text-align: left;
    }
-   .content-copy {
+
+   .content_copytext {
       max-width: 60ch;
       font-size: 1.8rem;
+   }
+
+   .project_overview_grid {
+      display: grid;
+      grid-template-columns: 50% 1fr;
+      grid-template-rows: auto;
    }
 }
 

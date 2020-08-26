@@ -37,6 +37,25 @@ h6 {
    font-family: "Barlow Condensed", sans-serif;
 }
 
+h1 {
+   font-size: 5.61rem;
+}
+h2 {
+   font-size: 4.209rem;
+}
+h3 {
+   font-size: 3.157rem;
+}
+h4 {
+   font-size: 2.369rem;
+}
+h5 {
+   font-size: 1.777rem;
+}
+h6 {
+   font-size: 1.333rem;
+}
+
 a {
    text-decoration: none;
    color: $accent-red-clr;
@@ -76,9 +95,9 @@ img {
    font-style: italic;
 }
 
-/* LINKS STYLES AND COLORS */
+/* MARGINS AND PADDINGS BY REMS */
 
-/* Margins and paddings by rems */
+// MARGINS
 // Top
 .mt0 {
    margin-top: 0;
@@ -135,6 +154,12 @@ img {
    margin-bottom: 4rem;
 }
 
+// No margin
+.m0 {
+   margin: 0;
+}
+
+// PADDING
 // Top
 .pt0 {
    padding-top: 0;
@@ -191,6 +216,32 @@ img {
    padding-bottom: 4rem;
 }
 
+// Left and right
+.px0 {
+   padding-right: 0;
+   padding-left: 0;
+}
+.px1 {
+   padding-right: 1rem;
+   padding-left: 1rem;
+}
+.px2 {
+   padding-right: 2rem;
+   padding-left: 2rem;
+}
+.px3 {
+   padding-right: 3rem;
+   padding-left: 3rem;
+}
+.px4 {
+   padding-right: 4rem;
+   padding-left: 4rem;
+}
+// No padding
+.p0 {
+   padding: 0;
+}
+
 /* BUTTON STYLES */
 .btn {
    display: block;
@@ -233,4 +284,11 @@ img {
 
 .btn + .btn {
    margin-top: 1.5rem;
+}
+
+.read-more-link {
+   font-family: "Barlow Condensed", sans-serif;
+   font-size: 1.5rem;
+   display: inline-block;
+   margin-bottom: 2rem;
 }
