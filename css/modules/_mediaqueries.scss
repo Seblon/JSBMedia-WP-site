@@ -269,19 +269,15 @@
       margin-left: 1rem;
    }
 
+   .project_page {
+      margin-bottom: 0;
+   }
+
    .project_header {
       display: flex;
       flex-direction: row;
-
+      flex-wrap: nowrap;
       background-color: $overlay-bg-clr;
-
-      &--left {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         padding: 2em;
-      }
 
       &_title {
          font-family: "Barlow Condensed", sans-serif;
@@ -293,13 +289,12 @@
       }
 
       &_subtitle {
-         display: block;
          font-family: "Barlow Condensed", sans-serif;
          font-weight: 400;
-         font-size: 2rem;
+         font-size: 1.75rem;
          text-align: center;
          color: $accent-green-clr;
-         max-width: 80%;
+         max-width: 90%;
          text-transform: uppercase;
       }
    }
@@ -307,10 +302,57 @@
    .project_body {
       margin: 4rem 0;
       background-color: $overlay-bg-clr;
-      padding: 2rem;
+      padding: 0 2rem 2rem;
       box-shadow: none;
       text-align: left;
-      column-count: 2;
+
+      .top-title {
+         padding-top: 1em;
+      }
+   }
+
+   .cards_wrapper {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .card {
+      display: flex;
+      flex-direction: row;
+
+      &_img {
+         max-width: 50%;
+         width: 50%;
+         max-height: 38vw;
+      }
+
+      &_content {
+         padding: 3rem;
+         height: 38vw;
+      }
+   }
+
+   .persona {
+      padding: 2rem;
+   }
+
+   .floating_block {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      &_text-wrapper {
+         margin-left: 8vw;
+
+         & .copytext_heading {
+            font-size: 1.777rem;
+         }
+
+         & .floating_block_text {
+            font-size: 1.333rem;
+            margin-bottom: 1.333rem;
+         }
+      }
    }
 
    // FOOTER
@@ -351,7 +393,7 @@
 }
 
 @media screen and (min-width: 1023px) {
-   main {
+   main:not(.project_page) {
       margin-top: 3rem;
    }
 
@@ -380,14 +422,44 @@
       padding: 2rem;
    }
 
+   .project_header--left {
+      padding: 3em;
+      flex: 1 0 50%;
+   }
+
    .copytext_title,
    .copytext_heading,
    .copytext_text {
       text-align: left;
    }
 
-   .project_presentation_image {
-      object-fit: cover;
+   .card {
+      &_img {
+         max-width: 100%;
+      }
+
+      &_title {
+         font-size: 1.777rem;
+      }
+
+      &_list-item {
+         font-size: 1.333rem;
+      }
+   }
+
+   .persona {
+      display: block;
+      column-count: 2;
+      column-gap: 2rem;
+      padding: 2rem;
+
+      &_img-wrapper {
+         max-width: 100%;
+      }
+   }
+
+   .floating_block_text-wrapper .copytext_heading {
+      text-align: center;
    }
 
    .inner-footer {
@@ -396,8 +468,8 @@
 }
 
 @media screen and (min-width: 1360px) {
-   .top-title {
-      text-align: left;
+   .copytext_heading {
+      margin-top: 0;
    }
 
    .content_copytext {
@@ -411,8 +483,84 @@
       grid-template-rows: auto;
    }
 
+   .cols {
+      display: block;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+      column-count: 2;
+      padding: 3rem;
+      column-gap: 2rem;
+   }
+
    .inner-footer {
       justify-content: space-evenly;
+   }
+
+   .cards_wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 4rem 4rem;
+   }
+
+   .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 28%;
+
+      &_img {
+         position: absolute;
+         top: -1rem;
+         left: -1rem;
+         max-width: 100%;
+         width: 100%;
+         max-height: 25vw;
+         height: 25vw;
+      }
+
+      &_title {
+         font-size: 1.5rem;
+      }
+
+      &_list-item {
+         font-size: 1rem;
+      }
+
+      &_content {
+         padding-top: 26vw;
+         margin-bottom: 6rem;
+      }
+   }
+
+   .card + .card {
+      margin-top: 0;
+   }
+   .card:last-child {
+      margin-bottom: unset;
+   }
+
+   .persona {
+      display: block;
+      column-count: 3;
+      column-gap: 2rem;
+      padding: 3rem;
+   }
+
+   .floating_block {
+      padding: 0;
+      & .copytext_heading {
+         font-size: 2.5rem;
+         margin-bottom: 2em;
+      }
+      & .floating_block_text {
+         margin-left: unset;
+         margin-bottom: 2.5rem;
+      }
+
+      & img {
+         max-width: 50%;
+      }
    }
 }
 
