@@ -427,23 +427,64 @@
       flex: 1 0 50%;
    }
 
+   .project_header--right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1 0 50%;
+   }
+
+   .highlight_wrapper {
+      padding: 1rem 2rem;
+   }
+
    .copytext_title,
    .copytext_heading,
    .copytext_text {
       text-align: left;
    }
 
-   .card {
-      &_img {
-         max-width: 100%;
+   .cards_wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 4rem 4rem;
+
+      .card {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         flex-basis: 28%;
+
+         &_img {
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            max-width: 100%;
+            width: 100%;
+            max-height: 25vw;
+            height: 25vw;
+         }
+
+         &_title {
+            font-size: 1.5rem;
+         }
+
+         &_list-item {
+            font-size: 1rem;
+         }
+
+         &_content {
+            padding-top: 26vw;
+            margin-bottom: 6rem;
+         }
       }
 
-      &_title {
-         font-size: 1.777rem;
+      .card + .card {
+         margin-top: 0;
       }
-
-      &_list-item {
-         font-size: 1.333rem;
+      .card:last-child {
+         margin-bottom: unset;
       }
    }
 
@@ -494,50 +535,6 @@
 
    .inner-footer {
       justify-content: space-evenly;
-   }
-
-   .cards_wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 0 4rem 4rem;
-   }
-
-   .card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      flex-basis: 28%;
-
-      &_img {
-         position: absolute;
-         top: -1rem;
-         left: -1rem;
-         max-width: 100%;
-         width: 100%;
-         max-height: 25vw;
-         height: 25vw;
-      }
-
-      &_title {
-         font-size: 1.5rem;
-      }
-
-      &_list-item {
-         font-size: 1rem;
-      }
-
-      &_content {
-         padding-top: 26vw;
-         margin-bottom: 6rem;
-      }
-   }
-
-   .card + .card {
-      margin-top: 0;
-   }
-   .card:last-child {
-      margin-bottom: unset;
    }
 
    .persona {

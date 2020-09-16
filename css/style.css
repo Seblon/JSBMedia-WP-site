@@ -25,30 +25,32 @@ h4,
 h5,
 h6 {
   font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 h1 {
-  font-size: 5.61rem;
+  font-size: 2.986rem;
 }
 
 h2 {
-  font-size: 4.209rem;
+  font-size: 2.488rem;
 }
 
 h3 {
-  font-size: 3.157rem;
+  font-size: 2.074rem;
 }
 
 h4 {
-  font-size: 2.369rem;
+  font-size: 1.728rem;
 }
 
 h5 {
-  font-size: 1.777rem;
+  font-size: 1.44rem;
 }
 
 h6 {
-  font-size: 1.333rem;
+  font-size: 1.2rem;
 }
 
 a {
@@ -69,6 +71,13 @@ img {
 .container--fullwidth {
   min-width: 100vw;
   max-width: 100vw;
+}
+
+.container--narrow {
+  display: block;
+  max-width: 50%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .semi-trans {
@@ -175,6 +184,27 @@ header {
   z-index: 99;
   background-color: #1c1c1c;
   /* Nav toggle for binding clicks to menu */
+}
+
+@media screen and (min-width: 47.9375rem) {
+  header .header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .nav-toggle-label {
+    display: none;
+  }
+  header .logo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 100px;
+    width: 100px;
+  }
+  header .logo-img {
+    width: 100%;
+  }
 }
 
 header .logo {
@@ -389,6 +419,35 @@ h5.copytext_heading {
   font-weight: 300;
 }
 
+.contents_list {
+  list-style: none;
+}
+
+.contents_list-item {
+  margin: 1em;
+}
+
+.contents_list-item a {
+  color: #dedede;
+}
+
+.contents_list .contents_desc_number {
+  position: relative;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.contents_list .contents_desc_number::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #dedede;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .content_copytext {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 1.625rem;
@@ -583,6 +642,10 @@ h5.copytext_heading {
   color: #bed8d4;
   max-width: 80%;
   text-transform: uppercase;
+}
+
+.project_header.call-out_square {
+  flex-direction: column;
 }
 
 .project_body {
@@ -956,24 +1019,6 @@ footer {
   header {
     /* A way to align the menu side by side with logo */
   }
-  header .header-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header .nav-toggle-label {
-    display: none;
-  }
-  header .logo {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    max-width: 100px;
-    width: 100px;
-  }
-  header .logo-img {
-    width: 100%;
-  }
   header .main-nav {
     position: relative;
     display: flex;
@@ -1324,19 +1369,56 @@ footer {
     padding: 3em;
     flex: 1 0 50%;
   }
+  .project_header--right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 50%;
+  }
+  .highlight_wrapper {
+    padding: 1rem 2rem;
+  }
   .copytext_title,
   .copytext_heading,
   .copytext_text {
     text-align: left;
   }
-  .card_img {
+  .cards_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 4rem 4rem;
+  }
+  .cards_wrapper .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 28%;
+  }
+  .cards_wrapper .card_img {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
     max-width: 100%;
+    width: 100%;
+    max-height: 25vw;
+    height: 25vw;
   }
-  .card_title {
-    font-size: 1.777rem;
+  .cards_wrapper .card_title {
+    font-size: 1.5rem;
   }
-  .card_list-item {
-    font-size: 1.333rem;
+  .cards_wrapper .card_list-item {
+    font-size: 1rem;
+  }
+  .cards_wrapper .card_content {
+    padding-top: 26vw;
+    margin-bottom: 6rem;
+  }
+  .cards_wrapper .card + .card {
+    margin-top: 0;
+  }
+  .cards_wrapper .card:last-child {
+    margin-bottom: unset;
   }
   .persona {
     display: block;
@@ -1376,43 +1458,6 @@ footer {
   }
   .inner-footer {
     justify-content: space-evenly;
-  }
-  .cards_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 4rem 4rem;
-  }
-  .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 28%;
-  }
-  .card_img {
-    position: absolute;
-    top: -1rem;
-    left: -1rem;
-    max-width: 100%;
-    width: 100%;
-    max-height: 25vw;
-    height: 25vw;
-  }
-  .card_title {
-    font-size: 1.5rem;
-  }
-  .card_list-item {
-    font-size: 1rem;
-  }
-  .card_content {
-    padding-top: 26vw;
-    margin-bottom: 6rem;
-  }
-  .card + .card {
-    margin-top: 0;
-  }
-  .card:last-child {
-    margin-bottom: unset;
   }
   .persona {
     display: block;
