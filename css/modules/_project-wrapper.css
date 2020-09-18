@@ -1,0 +1,70 @@
+// Delete this comment whenever
+.project-wrapper {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   place-items: center;
+   row-gap: 3rem;
+
+   .project-frame {
+      display: flex;
+      border: 6px solid $accent-red-clr;
+      width: 85vw;
+      height: 85vw;
+      justify-content: center;
+      align-items: center;
+      transition: border 0.2s ease-in-out;
+   }
+
+   .project-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      height: 90%;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+   }
+
+   a .project-content-title {
+      position: relative;
+      color: $primary-clr;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transform: scale(1);
+      transition: transform 0.3s ease-in-out;
+   }
+
+   .project-frame:first-of-type .project-content-title:first-of-type {
+      font-size: 5rem;
+   }
+}
+
+.project-frame:hover {
+   border: 12px solid $accent-green-clr;
+}
+
+.project-frame:hover .project-content-title {
+   text-shadow: 5px 0 10px rgba(46, 13, 21, 0.5),
+      -5px 0 10px rgba(46, 13, 21, 0.5), 0 5px 10px rgba(46, 13, 21, 0.5),
+      0 -5px 10px rgba(46, 13, 21, 0.5);
+   transform: scale(1.25);
+}
+.project-frame:hover .project-content {
+   width: 80%;
+   height: 80%;
+}
+
+@media screen and (min-width: 47.9375rem) {
+   .project-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      place-items: center;
+   }
+   .project-frame {
+      max-width: 60vw;
+      max-height: 60vw;
+   }
+}

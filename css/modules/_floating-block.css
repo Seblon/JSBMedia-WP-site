@@ -1,0 +1,14 @@
+// Delete this comment whenever
+.floating_block {
+   display: flex;
+   flex-direction: column;
+   padding: 2rem;
+   background-color: $overlay-strong-clr;
+   text-align: center;
+
+   &_text {
+      color: $primary-bg-clr;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+   }
+}

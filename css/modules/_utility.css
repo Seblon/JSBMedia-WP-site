@@ -1,0 +1,146 @@
+/* MARGINS AND PADDINGS IN REMS */
+
+// MARGINS
+// Top
+.mt0 {
+   margin-top: 0;
+}
+.mt1 {
+   margin-top: 1rem;
+}
+.mt2 {
+   margin-top: 2rem;
+}
+.mt3 {
+   margin-top: 3rem;
+}
+.mt4 {
+   margin-top: 4rem;
+}
+
+// Bottom
+.mb0 {
+   margin-bottom: 0;
+}
+.mb1 {
+   margin-bottom: 1rem;
+}
+.mb2 {
+   margin-bottom: 2rem;
+}
+.mb3 {
+   margin-bottom: 3rem;
+}
+.mb4 {
+   margin-bottom: 4rem;
+}
+
+// Top and bottom
+.my0 {
+   margin-top: 0;
+   margin-bottom: 0;
+}
+.my1 {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+}
+.my2 {
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+}
+.my3 {
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+.my4 {
+   margin-top: 4rem;
+   margin-bottom: 4rem;
+}
+
+// No margin
+.m0 {
+   margin: 0;
+}
+
+// PADDING
+// Top
+.pt0 {
+   padding-top: 0;
+}
+.pt1 {
+   padding-top: 1rem;
+}
+.pt2 {
+   padding-top: 2rem;
+}
+.pt3 {
+   padding-top: 3rem;
+}
+.pt4 {
+   padding-top: 4rem;
+}
+
+// Bottom
+.pb0 {
+   padding-bottom: 0;
+}
+.pb1 {
+   padding-bottom: 1rem;
+}
+.pb2 {
+   padding-bottom: 2rem;
+}
+.pb3 {
+   padding-bottom: 3rem;
+}
+.pb4 {
+   padding-bottom: 4rem;
+}
+
+// Top and bottom
+.py0 {
+   padding-top: 0;
+   padding-bottom: 0;
+}
+.py1 {
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+.py2 {
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+.py3 {
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+}
+.py4 {
+   padding-top: 4rem;
+   padding-bottom: 4rem;
+}
+
+// Left and right
+.px0 {
+   padding-right: 0;
+   padding-left: 0;
+}
+.px1 {
+   padding-right: 1rem;
+   padding-left: 1rem;
+}
+.px2 {
+   padding-right: 2rem;
+   padding-left: 2rem;
+}
+.px3 {
+   padding-right: 3rem;
+   padding-left: 3rem;
+}
+.px4 {
+   padding-right: 4rem;
+   padding-left: 4rem;
+}
+// No padding
+.p0 {
+   padding: 0;
+}

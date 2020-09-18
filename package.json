@@ -1,0 +1,37 @@
+{
+   "name": "JSBMedia-WP-site",
+   "version": "1.0.0",
+   "description": "",
+   "main": "webpack-config.js",
+   "scripts": {
+      "dev": "webpack",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Seblon/JSBMedia-WP-site.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Seblon/JSBMedia-WP-site/issues"
+   },
+   "homepage": "https://github.com/Seblon/JSBMedia-WP-site#readme",
+   "dependencies": {
+      "lodash": "^4.17.20",
+      "normalize.css": "^8.0.1",
+      "postcss": "^8.0.5"
+   },
+   "devDependencies": {
+      "autoprefixer": "^10.0.0",
+      "css-loader": "^4.3.0",
+      "postcss-import": "^12.0.1",
+      "postcss-loader": "^4.0.2",
+      "postcss-nested": "^5.0.0",
+      "postcss-simple-vars": "^6.0.0",
+      "style-loader": "^1.2.1",
+      "webpack": "^4.44.1",
+      "webpack-cli": "^3.3.12"
+   }
+}

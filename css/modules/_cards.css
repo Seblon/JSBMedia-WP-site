@@ -1,0 +1,51 @@
+// Delete this comment whenever
+.cards_wrapper {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   background-color: $overlay-strong-clr;
+
+   &_content {
+      padding: 1rem 2rem 2rem;
+   }
+
+   &_title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $primary-bg-clr;
+      position: relative;
+      margin-bottom: 3rem;
+
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: -1.5rem;
+         left: 0;
+         width: 4rem;
+         height: 3px;
+         background-color: $primary-bg-clr;
+      }
+   }
+
+   &_list {
+      list-style: none;
+
+      &-item {
+         color: $primary-bg-clr;
+         line-height: 2;
+      }
+   }
+}
+
+.card + .card {
+   margin-top: 3rem;
+}
+
+.card:last-child {
+   margin-bottom: 2rem;
+}

@@ -1,2 +1,4 @@
+#Numerous always-ignore extensions
 XD/
 *.xd
+node_modules/

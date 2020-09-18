@@ -5,7 +5,6 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>About Me | JSBMedia</title>
-   <link rel="stylesheet" href="css/style.css">
    <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap"
       rel="stylesheet">
@@ -13,42 +12,73 @@
 </head>
 
 <body>
+   <!-- HEADER -->
+   <header>
+      <div class="container">
+         <div class="header-block">
+            <div class="logo">
+               <a href="index.html"><img class="logo-img" src="images/logo-grey-reddot.svg" alt="JSBMedia logo"></a>
+            </div>
+            <input type="checkbox" name="nav-toggle" class="nav-toggle" id="nav-toggle">
+            <nav class="main-nav">
+               <div class="menu-logo">
+                  <a><img class="logo-img" src="images/logo-white.svg" alt="JSBMedia logo"></a>
+               </div>
+               <ul class="nav-list">
+                  <li class="nav-list-item"><a class="current" href="#">home</a></li>
+                  <li class="nav-list-item"><a href="page-portfolio.html">Portfolio</a></li>
+                  <li class="nav-list-item"><a href="page-about.html">about</a></li>
+                  <li class="nav-list-item"><a href="#">contact</a></li>
+               </ul>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+               <span class="menu-icon menu-icon-top"></span>
+               <span class="menu-icon menu-icon-mid"></span>
+               <span class="menu-icon menu-icon-btm"></span>
+            </label>
+         </div>
+      </div>
+   </header>
 
    <div class="container container--narrow">
-      <h2 class="contents_heading">Innehåll</h2>
       <main class="project_page">
-         <ul class="contents_list">
-            <li class="contents_list-item">
-               <a href="#">
+         <h2 class="contents_heading">Innehåll</h2>
+         <div class="contents_wrapper">
+            <ul class="contents_list">
+               <li class="contents_list-item">
                   <p class="contents_desc_number">01.</p>
-                  <p class="contents_desc">Vem är jag?</p>
-               </a>
-            </li>
-            <li class="contents_list-item">
-               <a href="#">
+                  <a href="#">
+                     <p class="contents_desc">Vem är jag?</p>
+                  </a>
+               </li>
+               <li class="contents_list-item">
                   <p class="contents_desc_number">02.</p>
-                  <p class="contents_desc">Vad är viktigt för mig?</p>
-               </a>
-            </li>
-            <li class="contents_list-item">
-               <a href="#">
+                  <a href="#">
+                     <p class="contents_desc">Vad är viktigt för mig?</p>
+                  </a>
+               </li>
+               <li class="contents_list-item">
                   <p class="contents_desc_number">03.</p>
-                  <p class="contents_desc">Vad gör jag?</p>
-               </a>
-            </li>
-            <li class="contents_list-item">
-               <a href="#">
+                  <a href="#">
+                     <p class="contents_desc">Vad gör jag?</p>
+                  </a>
+               </li>
+            </ul>
+            <ul class="contents_list">
+               <li class="contents_list-item">
                   <p class="contents_desc_number">04.</p>
-                  <p class="contents_desc">Hur gör jag det?</p>
-               </a>
-            </li>
-            <li class="contents_list-item">
-               <a href="#">
+                  <a href="#">
+                     <p class="contents_desc">Hur gör jag det?</p>
+                  </a>
+               </li>
+               <li class="contents_list-item">
                   <p class="contents_desc_number">05.</p>
-                  <p class="contents_desc">Mina framtidsplaner</p>
-               </a>
-            </li>
-         </ul>
+                  <a href="#">
+                     <p class="contents_desc">Mina framtidsplaner</p>
+                  </a>
+               </li>
+            </ul>
+         </div>
       </main>
    </div>
 
@@ -144,7 +174,7 @@
          </article>
       </main>
    </div>
-
+   <script src="scripts/bundled.js"></script>
 </body>
 
 </html>

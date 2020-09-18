@@ -1,0 +1,15 @@
+// Delete this comment whenever
+.persona {
+   padding: 0.75rem;
+
+   &_name {
+      line-height: 1.5;
+      font-weight: 700;
+   }
+
+   &_occ {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-style: italic;
+   }
+}
