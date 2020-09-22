@@ -1,4 +1,3 @@
-// Delete this comment whenever
 .project_header {
    display: flex;
    flex-direction: column;
@@ -21,7 +20,7 @@
    }
 
    &_title {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: "Barlow Condensed", sans-serif;
       font-size: 2rem;
       line-height: 1.1;
       text-align: center;
@@ -31,7 +30,7 @@
 
    &_subtitle {
       display: block;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: "Barlow Condensed", sans-serif;
       font-weight: 400;
       font-size: 1.5rem;
       text-align: center;

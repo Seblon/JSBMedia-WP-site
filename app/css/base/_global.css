@@ -1,0 +1,276 @@
+:root {
+   font-size: 16px;
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background-color: $primary-bg-clr;
+   color: $primary-clr;
+   font-family: "Montserrat", sans-serif;
+   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Barlow Condensed", sans-serif;
+   text-transform: uppercase;
+   font-weight: 300;
+}
+
+h1 {
+   font-size: 2.986rem;
+}
+
+h2 {
+   font-size: 2.488rem;
+}
+
+h3 {
+   font-size: 2.074rem;
+}
+
+h4 {
+   font-size: 1.728rem;
+}
+
+h5 {
+   font-size: 1.44rem;
+}
+
+h6 {
+   font-size: 1.2rem;
+}
+
+a {
+   text-decoration: none;
+   color: $accent-red-clr;
+}
+
+img {
+   max-width: 100%;
+}
+
+.container {
+   max-width: 95%;
+   width: 95%;
+   margin: 0 auto;
+
+   &--fullwidth {
+      min-width: 100vw;
+      max-width: 100vw;
+   }
+
+   &--narrow {
+      display: block;
+      max-width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+   }
+
+   @mixin atSmall {
+      max-width: 70%;
+      width: 70%;
+   }
+
+   @mixin atXLarge {
+      max-width: 50%;
+      width: 50%;
+   }
+}
+
+main {
+   display: block;
+   position: relative;
+
+   &.large_top-margin {
+      padding-top: 3rem;
+   }
+
+   &.project_page {
+      margin-top: 2rem;
+      padding-top: 0;
+   }
+
+   @mixin atSmall {
+      &.large_top-margin {
+         margin-top: 6rem;
+         padding-top: 0.15rem;
+      }
+
+      margin-top: 3rem; /* Conflicting? */
+      margin-bottom: 5rem;
+
+      .line {
+         display: block;
+         position: absolute;
+      }
+      .top-left {
+         display: block;
+         width: 6rem;
+         height: 2px;
+         background-color: $line-clr;
+         top: 0rem;
+         left: -4rem;
+      }
+      .top-left::after {
+         content: "";
+         position: absolute;
+         width: 6rem;
+         height: 2px;
+         top: 2rem;
+         left: -2rem;
+         background-color: $line-clr;
+         transform: rotate(90deg);
+      }
+
+      .top-right {
+         display: block;
+         width: 6rem;
+         height: 2px;
+         background-color: $line-clr;
+         top: 0rem;
+         right: -4rem;
+      }
+      .top-right::after {
+         content: "";
+         position: absolute;
+         width: 6rem;
+         height: 2px;
+         top: 2rem;
+         right: -2rem;
+         background-color: $line-clr;
+         transform: rotate(90deg);
+      }
+
+      .btm-right {
+         display: block;
+         width: 6rem;
+         height: 2px;
+         background-color: $line-clr;
+         bottom: -3rem;
+         right: -4rem;
+      }
+      .btm-right::after {
+         content: "";
+         position: absolute;
+         width: 6rem;
+         height: 2px;
+         bottom: 2rem;
+         right: -2rem;
+         background-color: $line-clr;
+         transform: rotate(90deg);
+      }
+
+      .btm-left {
+         display: block;
+         width: 6rem;
+         height: 2px;
+         background-color: $line-clr;
+         bottom: -3rem;
+         left: -4rem;
+      }
+      .btm-left::after {
+         content: "";
+         position: absolute;
+         width: 6rem;
+         height: 2px;
+         bottom: 2rem;
+         left: -2rem;
+         background-color: $line-clr;
+         transform: rotate(90deg);
+      }
+   }
+
+   /*
+   @mixin atMedium {
+      margin-top: 6rem;
+      padding-bottom: 0.15rem;
+   } */
+
+   @mixin atLarge {
+      margin-top: 0;
+   }
+}
+
+article {
+   text-align: center;
+   padding: 2rem 0.5rem;
+   box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.2);
+   margin-bottom: 0;
+
+   @mixin atSmall {
+      margin-top: 3rem;
+      padding-bottom: 0;
+   }
+
+   @mixin atMedium {
+      padding: 3rem;
+   }
+
+   &.project_body {
+      margin: 2rem 0 4rem;
+      background-color: $overlay-bg-clr;
+      padding: 1.5rem 0.5rem;
+      box-shadow: none;
+      text-align: left;
+
+      .highlight_wrapper {
+         background-color: $overlay-bg-clr;
+         padding: 1rem 0.75rem;
+         border: 2px dashed #616161;
+         margin-bottom: 2rem;
+      }
+   }
+   &.semi-trans {
+      background-color: $overlay-bg-clr;
+   }
+}
+
+.bg_light {
+   background-color: $accent-green-clr;
+}
+.no-bs {
+   box-shadow: none;
+}
+
+/* Text hilights and more */
+.hilight--red {
+   color: $accent-red-clr;
+}
+.hilight--medium {
+   font-weight: 500;
+}
+.hilight--semi-bold {
+   font-weight: 600;
+}
+.hilight--bold {
+   font-weight: 700;
+}
+.hilight--black {
+   font-weight: 900;
+}
+.hilight--italic {
+   font-style: italic;
+}
+.dark_text {
+   color: $primary-bg-clr;
+}
+.all_caps {
+   text-transform: uppercase;
+}
+.barlow {
+   font-family: "Barlow Condensed", sans-serif;
+}
+
+.image-frame {
+   display: none;
+}

@@ -1,0 +1,83 @@
+.btn {
+   display: block;
+   background-color: $primary-clr;
+   color: $primary-bg-clr;
+   padding: 1rem 3rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   border: 3px solid $primary-clr;
+   border-radius: 4px;
+   transition: all 0.15s ease-in;
+   text-align: center;
+
+   @mixin atSmall {
+      padding: 1rem 2rem;
+   }
+
+   @mixin atMedium {
+      display: inline-block;
+      flex: 1;
+   }
+
+   &-wrapper {
+      padding: 0 0.75rem;
+
+      @mixin atSmall {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         padding: 0 3rem;
+      }
+      @mixin atMedium {
+         flex-direction: row;
+         justify-content: space-evenly;
+         flex: 0 0 100%; /* Don't allow grow or shrink, take up full width. */
+         padding: 0;
+      }
+      @mixin atLarge {
+         padding: 0 3rem;
+      }
+   }
+
+   /* Accent buttons */
+   &--red {
+      background-color: $accent-red-clr;
+      border: 3px solid $accent-red-clr;
+      color: $primary-clr;
+   }
+
+   &--outline {
+      background-color: transparent;
+      border: 3px solid $accent-red-clr;
+      color: $primary-clr;
+   }
+
+   &:hover {
+      background-color: $primary-clr;
+      color: $primary-bg-clr;
+      border: 3px solid $primary-clr;
+   }
+
+   &--outline:hover {
+      background-color: $primary-clr;
+      border: 3px solid $primary-clr;
+      color: $primary-bg-clr;
+   }
+}
+
+.btn + .btn {
+   margin-top: 1.5rem;
+
+   @mixin atMedium {
+      margin-top: 0;
+      margin-left: 1rem;
+   }
+}
+
+.read-more-link {
+   font-family: "Barlow Condensed", sans-serif;
+   font-size: 1.5rem;
+   display: inline-block;
+   margin-bottom: 2rem;
+}

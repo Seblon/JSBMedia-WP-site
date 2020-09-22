@@ -1,24 +1,35 @@
-// Only used once
 .mega-title {
-   font-family: 'Barlow Condensed', sans-serif;
+   font-family: "Barlow Condensed", sans-serif;
    font-size: 3.5rem;
    line-height: 1.5em;
    margin-bottom: 2rem;
+
+   @mixin atLarge {
+      font-size: 4rem;
+   }
 }
 
 .top-title {
-   font-family: 'Barlow Condensed', sans-serif;
+   font-family: "Barlow Condensed", sans-serif;
    font-weight: 300;
    text-transform: uppercase;
    font-size: 2.5rem;
    line-height: 1;
    text-align: center;
    padding-top: 1em;
+
+   @mixin atMedium {
+      font-size: 3.5rem;
+   }
+
+   @mixin atLarge {
+      font-size: 4rem;
+   }
 }
 
 .copytext_title {
    display: block;
-   font-family: 'Barlow Condensed', sans-serif;
+   font-family: "Barlow Condensed", sans-serif;
    letter-spacing: 1px;
    font-size: 2rem;
    color: $accent-red-clr;
@@ -57,12 +68,21 @@ h5.copytext_heading {
    font-weight: 300;
 }
 .content_copytext {
-   font-family: 'Barlow Condensed', sans-serif;
+   font-family: "Barlow Condensed", sans-serif;
    font-size: 1.625rem;
    font-weight: 200;
    line-height: 1.5em;
    letter-spacing: 2px;
    margin-bottom: 1.5em;
+
+   @mixin atSmall {
+      padding: 0 1rem;
+   }
+
+   @mixin atLarge {
+      font-size: 2rem;
+      padding: 0 3rem;
+   }
 }
 
 .article-info {

@@ -1,0 +1,18 @@
+@mixin atSmall {
+   .image-frame {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -4rem;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: $accent-green-clr;
+      box-shadow: 0 0 14px 10px rgba(0, 0, 0, 0.2);
+
+      & img {
+         display: inline-block;
+      }
+   }
+}

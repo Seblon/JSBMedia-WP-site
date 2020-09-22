@@ -1,6 +1,13 @@
-// Delete this comment whenever
 .project_overview {
    display: block;
+
+   &_grid {
+      @mixin atLarge {
+         display: grid;
+         grid-template-columns: 50% 1fr;
+         grid-template-rows: auto;
+      }
+   }
 }
 
 .project_overview:nth-child(n + 1) {

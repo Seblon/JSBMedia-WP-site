@@ -1,4 +1,3 @@
-// Delete this comment whenever
 .contents_wrapper {
    display: flex;
    .contents_list {
@@ -12,12 +11,12 @@
 
       .contents_desc_number {
          position: relative;
-         font-family: 'Barlow Condensed', sans-serif;
+         font-family: "Barlow Condensed", sans-serif;
          font-weight: 700;
          font-size: 1.2rem;
 
          &::after {
-            content: '';
+            content: "";
             width: 100%;
             height: 1px;
             background-color: #505050;
