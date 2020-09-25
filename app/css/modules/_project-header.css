@@ -3,6 +3,12 @@
    flex-direction: column;
    background-color: $overlay-bg-clr;
 
+   @mixin atSmall {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+   }
+
    &--left {
       display: flex;
       flex-direction: column;
@@ -10,8 +16,22 @@
       align-items: center;
       padding: 2em;
 
+      @mixin atSmall {
+         padding: 3rem; /* Evaluate */
+         flex: 1 0 50%;
+      }
+
       &.bg_light {
          padding: 2rem 0;
+      }
+   }
+
+   &--right {
+      @mixin atMedium {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex: 1 0 50%;
       }
    }
 
@@ -26,6 +46,10 @@
       text-align: center;
       text-transform: uppercase;
       margin-bottom: 0.5em;
+
+      @mixin atSmall {
+         font-size: 3rem;
+      }
    }
 
    &_subtitle {
@@ -37,6 +61,13 @@
       color: $accent-green-clr;
       max-width: 80%;
       text-transform: uppercase;
+
+      @mixin atSmall {
+         font-size: 1.75rem;
+         text-align: center;
+         color: $accent-green-clr;
+         max-width: 90%;
+      }
    }
 
    &.call-out_square {

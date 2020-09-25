@@ -40,9 +40,42 @@
    padding-top: 0.5rem;
 }
 
+/*
 .copytext_heading {
    font-weight: 500;
    font-size: 1.333rem;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-top: 2rem;
+   margin-bottom: 0.35em;
+} */
+h2.copytext_heading {
+   font-weight: 400;
+   font-size: 1.333rem;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-top: 2rem;
+   margin-bottom: 0.35em;
+}
+h3.copytext_heading {
+   font-size: 1.2rem;
+   font-weight: 300;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-top: 2rem;
+   margin-bottom: 0.35em;
+}
+h4.copytext_heading {
+   font-size: 1.1rem;
+   font-weight: 300;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin-top: 2rem;
+   margin-bottom: 0.35em;
+}
+h5.copytext_heading {
+   font-size: 1.1rem;
+   font-weight: 200;
    letter-spacing: 1px;
    text-transform: uppercase;
    margin-top: 2rem;
@@ -79,6 +112,12 @@ h5.copytext_heading {
       padding: 0 1rem;
    }
 
+   @mixin atMedium {
+      display: block;
+      max-width: 55ch;
+      margin: 0 auto 1.5em auto;
+   }
+
    @mixin atLarge {
       font-size: 2rem;
       padding: 0 3rem;
@@ -90,10 +129,21 @@ h5.copytext_heading {
    text-align: right;
    margin: 0.5em 0;
 
+   @mixin atMedium {
+      display: flex;
+      justify-content: flex-end;
+   }
+
    &_text {
       line-height: 1.6;
       font-weight: 300;
       font-size: 0.85rem;
+   }
+
+   @mixin atMedium {
+      .article-info_text + .article-info_text {
+         margin-left: 1rem;
+      }
    }
 }
 
@@ -118,15 +168,4 @@ h5.copytext_heading {
 }
 .large_space--right {
    margin-right: 0.5rem;
-}
-
-@media screen and (min-width: 63.9375rem) {
-   .article-info {
-      display: flex;
-      justify-content: flex-end;
-   }
-
-   .article-info_text + .article-info_text {
-      margin-left: 1rem;
-   }
 }

@@ -70,10 +70,11 @@ img {
    }
 
    &--narrow {
-      display: block;
-      max-width: 50%;
-      margin-right: auto;
-      margin-left: auto;
+      margin: 4rem auto 0;
+
+      @mixin atMedium {
+         margin-top: 5rem;
+      }
    }
 
    @mixin atSmall {
@@ -91,24 +92,43 @@ main {
    display: block;
    position: relative;
 
-   &.large_top-margin {
+   @mixin atLarge {
+      margin-top: 0;
+   }
+
+   &.main_home {
       padding-top: 3rem;
-   }
 
-   &.project_page {
-      margin-top: 2rem;
-      padding-top: 0;
-   }
-
-   @mixin atSmall {
-      &.large_top-margin {
+      @mixin atSmall {
          margin-top: 6rem;
          padding-top: 0.15rem;
       }
+   }
 
-      margin-top: 3rem; /* Conflicting? */
-      margin-bottom: 5rem;
+   &.main_single-project {
+      margin-top: 2rem;
+      padding-top: 0;
 
+      @mixin atLarge {
+         margin-top: 3rem;
+      }
+   }
+
+   &.main_page_portfolio {
+      margin-top: 2rem;
+      padding-top: 2rem;
+
+      @mixin atSmall {
+         padding-top: 1rem;
+      }
+   }
+
+   &.main_page_about {
+      margin-top: 0rem;
+      padding-top: 2rem;
+   }
+
+   @mixin atSmall {
       .line {
          display: block;
          position: absolute;
@@ -189,20 +209,10 @@ main {
          transform: rotate(90deg);
       }
    }
-
-   /*
-   @mixin atMedium {
-      margin-top: 6rem;
-      padding-bottom: 0.15rem;
-   } */
-
-   @mixin atLarge {
-      margin-top: 0;
-   }
 }
 
 article {
-   text-align: center;
+   text-align: left;
    padding: 2rem 0.5rem;
    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.2);
    margin-bottom: 0;
@@ -214,25 +224,59 @@ article {
 
    @mixin atMedium {
       padding: 3rem;
+      text-align: left;
    }
 
-   &.project_body {
+   &.article_project-body {
       margin: 2rem 0 4rem;
       background-color: $overlay-bg-clr;
       padding: 1.5rem 0.5rem;
       box-shadow: none;
       text-align: left;
 
+      @mixin atSmall {
+         margin: 2rem 0;
+         background-color: $overlay-bg-clr;
+         padding: 0.15rem 2rem 2rem;
+         box-shadow: none;
+         text-align: left;
+
+         .top-title {
+            padding-top: 1em;
+         }
+         &.persona {
+            padding: 2rem;
+         }
+      }
+      @mixin atLarge {
+         &.cols {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+            padding: 3rem;
+            column-gap: 2rem;
+
+            .copytext_heading:first-child {
+               margin-top: 0;
+            }
+         }
+      }
+
       .highlight_wrapper {
          background-color: $overlay-bg-clr;
          padding: 1rem 0.75rem;
          border: 2px dashed #616161;
          margin-bottom: 2rem;
+
+         @mixin atMedium {
+            padding: 1rem 2rem;
+         }
       }
    }
-   &.semi-trans {
-      background-color: $overlay-bg-clr;
-   }
+}
+
+.semi-trans {
+   background-color: $overlay-bg-clr;
 }
 
 .bg_light {

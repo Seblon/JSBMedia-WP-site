@@ -5,6 +5,19 @@
    place-items: center;
    row-gap: 3rem;
 
+   @mixin atSmall {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      place-items: center;
+   }
+
+   @mixin atMedium {
+      grid-template-columns: minmax(200px, 45%) minmax(200px, 45%);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center;
+      grid-gap: 1.5rem;
+   }
+
    .project-frame {
       display: flex;
       border: 6px solid $accent-red-clr;
@@ -13,6 +26,15 @@
       justify-content: center;
       align-items: center;
       transition: border 0.2s ease-in-out;
+
+      @mixin atSmall {
+         max-width: 60vw;
+         max-height: 60vw;
+      }
+      @mixin atMedium {
+         max-width: 100%;
+         max-height: 30vw;
+      }
    }
 
    .project-content {
@@ -32,6 +54,7 @@
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
+      text-align: center;
       transform: scale(1);
       transition: transform 0.3s ease-in-out;
    }
@@ -54,16 +77,4 @@
 .project-frame:hover .project-content {
    width: 80%;
    height: 80%;
-}
-
-@media screen and (min-width: 47.9375rem) {
-   .project-wrapper {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(4, 1fr);
-      place-items: center;
-   }
-   .project-frame {
-      max-width: 60vw;
-      max-height: 60vw;
-   }
 }

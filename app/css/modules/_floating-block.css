@@ -5,6 +5,47 @@
    background-color: $overlay-strong-clr;
    text-align: center;
 
+   @mixin atSmall {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      &_text-wrapper {
+         margin-left: 8vw;
+
+         & .copytext_heading {
+            font-size: 1.777rem;
+            margin-bottom: 1.333rem;
+         }
+
+         & .floating_block_text {
+            font-size: 1.333rem;
+            margin-bottom: 1.333rem;
+         }
+      }
+   }
+
+   @mixin atLarge {
+      padding: 0;
+
+      &_text-wrapper {
+         margin-left: 12vw;
+         & .copytext_heading {
+            font-size: 2.5rem;
+            margin-bottom: 2em;
+         }
+         & .floating_block_text {
+            margin-left: unset;
+            margin-bottom: 2.5rem;
+         }
+      }
+
+      & img {
+         max-width: 30%;
+         margin-right: 12vw;
+      }
+   }
+
    &_text {
       color: $primary-bg-clr;
       font-size: 1.15rem;
