@@ -2,3 +2,5 @@
 XD/
 *.xd
 node_modules/
+texter/
+.pages
