@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>About Me | JSBMedia</title>
    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Saira+Extra+Condensed:wght@700;900&display=swap"
       rel="stylesheet">
    <script src="https://kit.fontawesome.com/1ad77678d0.js" crossorigin="anonymous"></script>
 </head>
@@ -40,12 +40,34 @@
       </div>
    </header>
 
+   <div class="sidenotes sidenotes--fixed">
+      <div class="sidenote--left">ux design</div>
+      <div class="sidenote--right sidenote--right--one">graphic design</div>
+      <div class="sidenote--right sidenote--right--two">web development</div>
+   </div>
+
+   <div class="container mt4">
+      <main class="main_page_about">
+         <!-- START PROJECT HEADER -->
+         <div class="project_header">
+            <div class="project_header--left">
+               <h1 class="project_header_title">about me</h1>
+               <h2 class="project_header_subtitle">Who am I, really?</h2>
+            </div>
+            <div class="project_header--right">
+               <img class="project_header_image" src="images/image-size_small.jpg"
+                  alt="Composition of three different devices showing the RÅG website">
+            </div>
+         </div>
+      </main>
+   </div>
+
    <div class="container container--narrow">
+      <h2 class="contents_heading">Contents</h2>
       <main class="main_page_about">
          <div class="contents_toggler">
             <span class="contents_toggler_icon"><i class="fas fa-chevron-up"></i></span>
             <nav class="contents_wrapper">
-               <h2 class="contents_heading">Contents</h2>
                <ul class="contents_list">
                   <li class="contents_list-item">
                      <p class="contents_desc_number">01</p>
@@ -83,25 +105,9 @@
       </main>
    </div>
 
-   <div class="container ">
+   <div class="container mb4">
       <main class="main_page_about">
-         <!-- START PROJECT HEADER -->
-         <div class="project_header">
-            <div class="project_header--left">
-               <h1 class="project_header_title">café råg</h1>
-               <h2 class="project_header_subtitle">student project from University of borås</h2>
-            </div>
-            <div class="project_header--right">
-               <img class="project_header_image" src="images/image-size_small.jpg"
-                  alt="Composition of three different devices showing the RÅG website">
-            </div>
-         </div>
-      </main>
-   </div>
-
-   <div class="container">
-      <main class="main_page_about">
-         <article id="01" class="project_body cols">
+         <article id="01" class="article_project-body cols">
             <h2 class="copytext_heading">Who is Sebastian?</h2>
             <p class="copytext_text">
                Idag är jag en webbredaktör med god känsla för färg, form, copy och kod, utbildad på Högskolan i Borås
@@ -111,7 +117,7 @@
             </p>
             <p class="copytext_text">
                Jag heter Sebastian Bernhardtz och är 42 år på pappret men betydligt yngre i sinnet (inte en dag äldre än
-               25). Jag är pappa till 3 pojkar och bonuspappa till ytterligare två härliga ungar. I slutet av 2018
+               27). Jag är pappa till 3 pojkar och bonuspappa till ytterligare två härliga ungar. I slutet av 2018
                flyttade vi av personliga skäl till härliga Uddevalla där vi idag bor i en tvåvånings-femma mitt i stan.
                Av olika anledningar - inte minst tillgången till jobb - har vi dock redan börjat överväga möjligheten
                att flytta tillbaka till Göteborgsområdet.
@@ -155,28 +161,97 @@
             </p>
             <h2 class="copytext_heading">Tekniker & språk</h2>
             <p class="copytext_text">
-               Nu efter högskoleutbildningen arbetar jag hellre med Wordpress framför Joomla varför det också är cms:et
+               Nu efter högskoleutbildningen arbetar jag hellre med Wordpress framför Joomla varför det också är
+               cms:et
                som min portfolio utvecklats i.
             </p>
             <p class="copytext_text">
                De tekniker och språk som helst används när jag skapar saker kan delas in i flera olika kategorier som
                inte nödvändigtvis presenteras i den ordning de utförs.
             </p>
+         </article>
+      </main>
+   </div>
+
+   <div class="container--fullwidth bg_light">
+      <main class="main_page_about">
+         <article class="article_project-body">
+            <h2 class="top-title dark_text mb3">Tool Box</h2>
+            <div class="card_group">
+               <div class="card--no-image">
+                  <div class="card_content">
+                     <p class="card_title">Software</p>
+                     <ul class="card_list">
+                        <li class="card_list-item">Photoshop</li>
+                        <li class="card_list-item">Illustrator</li>
+                        <li class="card_list-item">InDesign</li>
+                        <li class="card_list-item">Adobe XD</li>
+                        <li class="card_list-item">Figma</li>
+                        <li class="card_list-item">After Effects</li>
+                        <li class="card_list-item">Visual Studio Code</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="card--no-image">
+                  <div class="card_content">
+                     <p class="card_title">Program Languages</p>
+                     <ul class="card_list">
+                        <li class="card_list-item">HTML5*</li>
+                        <li class="card_list-item">CSS* / SCSS / PostCSS</li>
+                        <li class="card_list-item">Javascript</li>
+                        <li class="card_list-item">PHP</li>
+                     </ul>
+                     <p class="card_comment">* Not an actual language, I know.<br />
+                        But still ;)</p>
+                  </div>
+               </div>
+               <div class="card--no-image">
+                  <div class="card_content">
+                     <p class="card_title">Frameworks / Libraries etc.</p>
+                     <ul class="card_list">
+                        <li class="card_list-item">Node</li>
+                        <li class="card_list-item">Webpack</li>
+                        <li class="card_list-item">React*</li>
+                     </ul>
+                     <p class="card_comment">* I don't actually know this one, but I really want to!</p>
+                  </div>
+               </div>
+               <div class="card--no-image">
+                  <div class="card_content">
+                     <p class="card_title">Versioning</p>
+                     <ul class="card_list">
+                        <li class="card_list-item">Git</li>
+                        <li class="card_list-item">Github</li>
+                        <li class="card_list-item">Bitbucket</li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="card--no-image">
+                  <div class="card_content">
+                     <p class="card_title">CMS</p>
+                     <ul class="card_list">
+                        <li class="card_list-item">Wordpress</li>
+                        <li class="card_list-item">Joomla</li>
+                        <li class="card_list-item">Drupal</li>
+                        <li class="card_list-item">Episerver</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </article>
+      </main>
+   </div>
+
+
+   <div class="container">
+      <main class="main_page_about">
+         <article class="article_project-body cols">
             <h2 class="copytext_heading">Arbetssätt & Problemlösning</h2>
             <p class="copytext_text">
                När ett nytt projekt påbörjas tar jag mer än gärna hjälp av mina kunskaper inom design och UX för att få
                en god förståelse för vad problemet består i och var användaren kommer in i bilden samt vad
                som behövs för att lösa problemet. I den här delen ingår mer konstnärliga delar av designarbetet där
                möjliga lösningar tas fram och presenteras genom skisser och enklare wireframes.</p>
-            <ul class="in-text_list">
-               <li class="in-text_list-item">reach a larger customer base</li>
-               <li class="in-text_list-item">offer a structured and easily findable way to advertise menus, open hours
-                  and
-                  directions for new customers to find their way</li>
-               <li class="in-text_list-item">ability for users to book a room for having conferences and events</li>
-               <li class="in-text_list-item">ability for users to order cakes and other delicacies online</li>
-               <li class="in-text_list-item">showcase the unique environments of the café</li>
-            </ul>
          </article>
       </main>
    </div>

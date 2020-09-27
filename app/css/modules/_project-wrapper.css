@@ -35,6 +35,9 @@
          max-width: 100%;
          max-height: 30vw;
       }
+      @mixin atXLarge {
+         max-height: 20vw;
+      }
    }
 
    .project-content {

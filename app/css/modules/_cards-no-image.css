@@ -1,0 +1,65 @@
+.card_group {
+   display: flex;
+   flex-direction: column;
+
+   @mixin atSmall {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+   }
+
+   .card--no-image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 100%;
+      text-align: center;
+      overflow: hidden;
+      background-color: rgba(222, 222, 222, 0.24);
+      border: solid 1px $logo-green-clr;
+      border-radius: 6px;
+      margin: 2rem;
+
+      @mixin atSmall {
+         flex: 0 1 40%;
+      }
+
+      @mixin atMedium {
+         flex: 0 1 28%;
+         margin: 1rem;
+      }
+
+      .card_content {
+         .card_comment {
+            font-size: 0.9rem;
+            color: $primary-bg-clr;
+            font-style: italic;
+            padding-top: 1rem;
+         }
+         @mixin atSmall {
+            position: relative;
+            height: 100%;
+         }
+         @mixin atMedium {
+            padding: 3rem;
+            margin-bottom: unset;
+         }
+      }
+
+      .card_title::after {
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+}
+
+/*
+.card--no-image + .card--no-image {
+   margin-top: 3rem;
+}
+
+.card:last-child {
+   margin-bottom: 2rem;
+}
+*/

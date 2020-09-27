@@ -69,11 +69,15 @@ img {
       max-width: 100vw;
    }
 
+   /* Only used together with table of contents module */
    &--narrow {
-      margin: 4rem auto 0;
+      margin: 1rem auto 0;
 
       @mixin atMedium {
-         margin-top: 5rem;
+         margin-top: 1rem;
+      }
+      @mixin atLarge {
+         display: none;
       }
    }
 
@@ -125,7 +129,7 @@ main {
 
    &.main_page_about {
       margin-top: 0rem;
-      padding-top: 2rem;
+      padding-top: 1rem;
    }
 
    @mixin atSmall {
@@ -272,6 +276,15 @@ article {
             padding: 1rem 2rem;
          }
       }
+   }
+}
+
+.innertext_container {
+   display: block;
+
+   @mixin atSmall {
+      max-width: 90%;
+      margin: 0 auto;
    }
 }
 

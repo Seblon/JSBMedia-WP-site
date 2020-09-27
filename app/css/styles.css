@@ -4,6 +4,7 @@
 @import "base/_text-content";
 @import "modules/_buttons";
 @import "modules/_header";
+@import "modules/_sidenotes";
 @import "modules/_breadcrumbs";
 @import "modules/_table-of-contents";
 @import "modules/_portrait";
@@ -12,6 +13,7 @@
 @import "modules/_project-wrapper";
 @import "modules/_personas";
 @import "modules/_cards";
+@import "modules/_cards-no-image";
 @import "modules/_floating-block";
 @import "modules/_footer";
 @import "modules/_utility";

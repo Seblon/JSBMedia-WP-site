@@ -3,6 +3,11 @@
    font-size: 3.5rem;
    line-height: 1.5em;
    margin-bottom: 2rem;
+   text-align: center;
+
+   @mixin atMedium {
+      text-align: left;
+   }
 
    @mixin atLarge {
       font-size: 4rem;
@@ -40,15 +45,6 @@
    padding-top: 0.5rem;
 }
 
-/*
-.copytext_heading {
-   font-weight: 500;
-   font-size: 1.333rem;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   margin-top: 2rem;
-   margin-bottom: 0.35em;
-} */
 h2.copytext_heading {
    font-weight: 400;
    font-size: 1.333rem;
@@ -97,30 +93,25 @@ h5.copytext_heading {
 
 .copytext_text {
    margin-bottom: 1.25em;
-   line-height: 1.5;
+   line-height: 1.6;
    font-weight: 300;
 }
-.content_copytext {
+.frontpage_copytext {
    font-family: "Barlow Condensed", sans-serif;
    font-size: 1.625rem;
    font-weight: 200;
-   line-height: 1.5em;
+   line-height: 1.6;
    letter-spacing: 2px;
    margin-bottom: 1.5em;
-
-   @mixin atSmall {
-      padding: 0 1rem;
-   }
+   text-align: center;
 
    @mixin atMedium {
-      display: block;
-      max-width: 55ch;
-      margin: 0 auto 1.5em auto;
+      text-align: left;
+      font-size: 1.7;
    }
 
    @mixin atLarge {
       font-size: 2rem;
-      padding: 0 3rem;
    }
 }
 
